@@ -1,2 +1,2 @@
-# dota-heroes
-Application develop with ReactJS for maintain information about DOTA heroes
+# DOTA Heroes
+Application develop with React for maintain information about DOTA heroes

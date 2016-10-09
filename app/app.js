@@ -2,8 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Loading from './components/Loading';
+import './assets/main';
 
 const app = document.getElementById('app');
 ReactDOM.render(
-  <h1>Hello world!!</h1>, app
+  <div>
+    <Loading />
+    <span className="container icon icon-zap"></span>
+  </div>, app
 );

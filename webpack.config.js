@@ -23,7 +23,6 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.css', '.scss', '.sass']
   },
-  context: __dirname,
   module: {
     loaders: [
       {
@@ -32,8 +31,8 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$|\.scss$/,
-        loader: 'style!css!scss!sass',
+        test: /\.css$|\.scss$|\.sass$/,
+        loader: 'style!css!sass',
       }
     ]
   },
@@ -54,6 +53,10 @@ module.exports = {
         from: '**/*',
         to: paths.assetsUrlDest
       }
-    ])
+    ], {
+      ignore: [
+        '*.scss',
+      ]
+    })
   ]
 };
