@@ -1,0 +1,1 @@
+export const RETRIEVE_HEROES = 'RETRIEVE_HEROES';
