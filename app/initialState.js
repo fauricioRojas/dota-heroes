@@ -1,3 +1,4 @@
 export default {
-  heroes: []
+  heroes: [],
+  activeHeroe: {}
 };

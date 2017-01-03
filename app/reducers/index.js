@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import heroes from './heroesReducer';
+import activeHeroe from './activeHeroeReducer';
 
 const rootReducer = combineReducers({
-  heroes
+  heroes,
+  activeHeroe
 });
 
 export default rootReducer;

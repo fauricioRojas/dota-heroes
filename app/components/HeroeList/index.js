@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import HeroeDetails from '../HeroeDetails';
 import HeroeMini from '../HeroeMini';
 import Loading from '../Loading';
 
@@ -18,13 +19,16 @@ class HeroeList extends Component {
 
   render () {
     const content = this.props.heroes.length ?
-      <ul>
-        {this.props.heroes.map(value => <li key={value.id}>{value.name}</li>)}
+      <ul className='heroes-menu'>
+        {this.props.heroes.map(value =>
+          <HeroeMini key={value.id} heroe={value} onClickHeroe={this.props.actions.getHeroe}/>
+        )}
       </ul> : <Loading />;
 
     return (
-      <section>
+      <section className='flex'>
         { content }
+        <HeroeDetails />
       </section>
     )
   }
